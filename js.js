@@ -1,7 +1,6 @@
 // Al cargar la página agregar evento del indicador y activar botones del inicio
 var menuList = document.getElementById('menu-list');
 
-
 document.addEventListener('DOMContentLoaded', () => {
     let subtopics = document.querySelectorAll('.subtopic');
     subtopics.forEach((element) => {
@@ -19,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuList.style.display = 'none';
         }
     });
+    btnMenu.click();
 
     let index = document.querySelectorAll('.index');
     index.forEach((element) => {
