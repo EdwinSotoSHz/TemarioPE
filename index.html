@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temario Probabilidad y Estadística</title>
+    <!-- Recursos -->
+    <link rel="icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- MathJax permite renderizar formato LaTeX -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Incluir la fuente de KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+    <!-- Include Highlight.js CSS for Monokai theme -->
+    <link rel="stylesheet"href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/stackoverflow-light.min.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="menu">
+        <button id="btn-menu">
+            <i class="fa-solid fa-bars" style="font-size: 1.6rem;"></i>
+        </button>
+        <div id="menu-list">
+            <ol>
+                <li><a href="#100" class="index">Estadística descriptiva</a>
+                    <ol>
+                        <li><a href="#110" class="index">Conceptos básicos de estadística</a></li>
+                        <li><a href="#120" class="index">Descripción de datos</a></li>
+                        <li><a href="#130" class="index">Medidas de tendencia central</a></li>
+                        <li><a href="#140" class="index">Parámetros para datos agrupados</a></li>
+                        <li><a href="#150" class="index">Distribución de frecuencias</a></li>
+                        <li><a href="#160" class="index">Técnicas de agrupación de datos</a></li>
+                        <li><a href="#170" class="index">Técnicas de muestreo</a></li>
+                        <li><a href="#180" class="index">Histogramas</a></li>
+                        <li><a href="#n01" class="index">[Notebook] Distribución de Frecuencias</a></li>
+                    </ol>
+                </li>
+                <li><a href="#200" class="index">Fundamentos de la Teoría de Probabilidad</a>
+                    <ol>
+                        <li><a href="#210" class="index">Técnicas de Conteo</a>
+                            <ol>
+                                <li><a href="#211" class="index">Principio aditivo</a></li>
+                                <li><a href="#212" class="index">Principio multiplicativo</a></li>
+                                <li><a href="#213" class="index">Notación Factorial</a></li>
+                                <li><a href="#214" class="index">Permutaciones</a></li>
+                                <li><a href="#215" class="index">Combinaciones</a></li>
+                                <li><a href="#216" class="index">Diagrama de Árbol</a></li>
+                                <li><a href="#217" class="index">Teorema del Binomio</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#220" class="index">Teoría elemental de probabilidad</a></li>
+                        <li><a href="#230" class="index">Probabilidad de Eventos</a></li>
+                        <li><a href="#240" class="index">Probabilidad con Técnicas de Conteo</a></li>
+                        <li><a href="#250" class="index">Probabilidad condicional</a></li>
+                        <li><a href="#260" class="index">Ley multiplicativa</a></li>
+                        <li><a href="#270" class="index">Eventos independientes</a></li>
+                        <li><a href="#n02" class="index">[Notebook] Combinaciones y Permutaciones</a></li>
+                    </ol>
+                </li>
+                <li><a href="#300" class="index">Variables Aleatorias</a>
+                    <ol>
+                        <li><a href="#310" class="index">Variables aleatorias discretas:</a>
+                            <ol>
+                                <li><a href="#311" class="index">Distribución de probabilidad general</a></li>
+                                <li><a href="#312" class="index">Valor esperado</a></li>
+                                <li><a href="#313" class="index">Varianza, desviación estándar</a></li>
+                                <li><a href="#314" class="index">Función acumulada</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#320" class="index">Variables aleatorias continuas:</a>
+                            <ol>
+                                <li><a href="#321" class="index">Distribución de probabilidad general</a></li>
+                                <li><a href="#322" class="index">Valor esperado</a></li>
+                                <li><a href="#323" class="index">Varianza, desviación estándar</a></li>
+                                <li><a href="#324" class="index">Función acumulada</a></li>
+                                <li><a href="#325" class="index">Cálculos de probabilidad</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li><a href="#400" class="index">Distribuciones de Probabilidad</a>
+                    <ol>
+                        <li><a href="#410" class="index">Función de probabilidad</a></li>
+                        <li><a href="#420" class="index">Distribución binomial</a></li>
+                        <li><a href="#430" class="index">Distribución hipergeométrica</a></li>
+                        <li><a href="#440" class="index">Distribución de Poisson</a></li>
+                        <li><a href="#450" class="index">Distribución normal</a></li>
+                        <li><a href="#460" class="index">Distribución T-student</a></li>
+                        <li><a href="#470" class="index">Distribución Chi cuadrada</a></li>
+                        <li><a href="#480" class="index">Distribución F</a></li>
+                    </ol>
+                </li>
+                <li><a href="#500" class="index">Regresión y correlación</a>
+                    <ol>
+                        <li><a href="#510" class="index">Diagrama de dispersión</a></li>
+                        <li><a href="#520" class="index">Regresión lineal simple</a></li>
+                        <li><a href="#530" class="index">Correlación</a></li>
+                        <li><a href="#540" class="index">Coeficientes de correlación y determinación</a></li>
+                        <li><a href="#550" class="index">Distribución normal bidimensional</a></li>
+                        <li><a href="#560" class="index">Coeficiente de correlación</a></li>
+                        <li><a href="#570" class="index">Errores de medición</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <header>
+        <div class="titulo">
+            Temario - Probabilidad y Estadística
+        </div>
+        <div class="subtitulo">
+            Ingeniería en Tecnologías de la Información y Comunicaciones
+        </div>
+    </header>
+    <div class="datos">
+        <h2>Datos Generales</h2>
+        <p><strong>Nombre de la asignatura:</strong> Probabilidad y Estadística</p>
+        <p><strong>Nombre del alumno:</strong> <a href="https://app.dataquest.io/profile/230110358">Edwin Salvador Soto Hernandez</a></p>
+        <p><strong></strong></p></a>
+        <p><strong>TECNOLÓGICO NACIONAL DE MÉXICO</strong></p>
+        <p><strong>INSTITUTO TECNOLÓGICO SUPERIOR DEL OCCIDENTE DEL ESTADO DE HIDALGO</strong></p>
+    </div>
+
+    <!-- ###########################################  TEMA 1 ########################################### -->
+    <div class="topic">
+        <div class="topic-title" id="100"><h2>Tema 1: Estadística descriptiva</h2></div>
+        <div class="general-content">
+            <div class="subtopics">
+                <button class="indicator" disabled></button>
+                <button class="subtopic" id="110"><span>
+                        1.1 <span class="subtopic-title">Conceptos básicos de estadística</span>
+                </span></button>
+                <button class="subtopic" id="120"><span>
+                        1.2 <span class="subtopic-title">Descripción de datos</span>
+                </span></button>
+                <button class="subtopic" id="130"><span>
+                        1.3 <span class="subtopic-title">Medidas de tendencia central y Medidas de dispersión</span>
+                </span></button>
+                <button class="subtopic" id="140"><span>
+                        1.4 <span class="subtopic-title">Parámetros para datos agrupados</span>
+                </span></button>
+                <button class="subtopic" id="150"><span>
+                        1.5 <span class="subtopic-title">Distribución de frecuencias</span>
+                </span></button>
+                <button class="subtopic" id="160"><span>
+                        1.6 <span class="subtopic-title">Técnicas de agrupación de datos</span>
+                </span></button>
+                <button class="subtopic" id="170"><span>
+                        1.7 <span class="subtopic-title">Técnicas de muestreo</span>
+                </span></button>
+                <button class="subtopic" id="180"><span>
+                        1.8 <span class="subtopic-title">Histogramas</span>
+                </span></button>
+                <a href="DatosAgrupados.html" style="padding: 0px;" id="n01">
+                    <button class="subtopic" id="n01"><span>
+                        [Notebook] <span class="subtopic-title">Distribución de Frecuencias</span> 
+                    </span></button>
+                </a>
+            </div>
+            <div class="contents">
+                <div class="content-subtopic" id="content-110">
+                    <h3>Conceptos básicos de estadística</h3>
+                    <p>
+                        <b>Definición de estadística:</b> La estadística es una rama de las matemáticas que se ocupa de la recopilación, análisis, interpretación y presentación de datos. Su objetivo es describir patrones y tendencias en conjuntos de datos para hacer inferencias y tomar decisiones.<br>
+                        <b>Teoría de decisión:</b> Es un área de la estadística que estudia cómo tomar decisiones óptimas bajo incertidumbre, utilizando herramientas estadísticas y probabilísticas para evaluar diferentes opciones y sus consecuencias.<br>
+                        <b>Población:</b> En estadística, una población se refiere al conjunto completo de elementos o individuos que tienen al menos una característica en común y que son de interés para el estudio estadístico.<br>
+                        <b>Muestra aleatoria:</b> Es un subconjunto representativo de la población elegido de manera que cada miembro de la población tenga la misma probabilidad de ser seleccionado. Las muestras aleatorias son fundamentales para generalizar conclusiones sobre la población más amplia a partir de los datos recogidos.<br>
+                        <b>Parámetros aleatorios:</b> Son características numéricas que describen una población completa y que generalmente son desconocidas. Por ejemplo, la media poblacional, la desviación estándar, etc. Estos parámetros son inferidos a partir de la información obtenida de una muestra.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-120">
+                    <h3>Descripción de datos</h3>
+                    <p>
+                        <b>Datos no agrupados:</b> Son datos individuales que se presentan tal como se recopilan, sin clasificar en categorías o intervalos. Cada observación tiene un valor específico y único. <br>
+                        <b>Datos agrupados:</b> Son datos que se organizan en intervalos o clases para resumir la información y facilitar su análisis. En lugar de listar cada valor individual, los datos se agrupan en rangos o clases. <br>
+                        <b>Frecuencia de clase:</b> En datos agrupados, la frecuencia de clase se refiere al número de observaciones que caen dentro de cada intervalo o clase. Es decir, cuántas veces aparece un valor dentro de un intervalo específico. <br>
+                        <b>Frecuencia relativa:</b> Es la proporción o el porcentaje de observaciones que caen dentro de cada clase en relación con el número total de observaciones. Se calcula dividiendo la frecuencia de clase entre el tamaño total de la muestra. <br>
+                        <b>Punto medio de clase:</b> En datos agrupados, el punto medio de clase es el valor medio de cada intervalo o clase. Se calcula sumando los límites inferior y superior de la clase y dividiendo por 2. <br>
+                        <b>Límites de clase:</b> Son los valores que definen los extremos de cada intervalo o clase en datos agrupados. Existen límites inferior y superior para cada intervalo, que determinan los valores mínimos y máximos dentro de ese rango. <br>
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-130">
+                    <h3>Medidas de tendencia central y Medidas de dispersión</h3>
+                    <p>
+                        <b>Medidas de tendencia central:</b> <br>
+                        Media aritmética: Es el promedio de un conjunto de datos numéricos. Se calcula sumando todos los valores y dividiendo por el número total de observaciones n.
+                        <div id="math-output">
+                            \( \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i \)
+                        </div>
+                        Media geométrica: Es útil para calcular el promedio de tasas de crecimiento o cuando se manejan datos que crecen exponencialmente. Se obtiene calculando la raíz enésima del producto de los valores.
+                        <div id="math-output">
+                            \( \bar{x}_{geom} = \left( \prod_{i=1}^{n} x_i \right)^{1/n} \)
+                        </div>
+                        Media ponderada: Es la media en la cual diferentes observaciones tienen pesos diferentes. Se calcula multiplicando cada valor por su peso correspondiente, sumando estos productos y dividiendo por la suma de los pesos.
+                        <div id="math-output">
+                            \( \bar{x}_{pond} = \frac{\sum_{i=1}^{n} w_i \cdot x_i}{\sum_{i=1}^{n} w_i} \)
+                        </div>
+                        Mediana: Es el valor que separa a la mitad de los datos cuando estos están ordenados de menor a mayor (o viceversa). Si n es impar, la mediana es el valor en el centro de la distribución; si n es par, es el promedio de los dos valores centrales.
+                        <br>
+                        Moda: Es el valor que ocurre con mayor frecuencia en un conjunto de datos. Puede haber una moda (unimodal), dos modas (bimodal) o más (multimodal).
+                        <br>
+                        <b>Medidas de dispersión:</b> <br>
+                        Varianza: Mide la dispersión de los datos con respecto a la media. Se calcula como la media de los cuadrados de las desviaciones de cada valor respecto a la media.
+                        <div id="math-output">
+                            \( \sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2 \)
+                        </div>
+                        Desviación estándar: Es la raíz cuadrada positiva de la varianza y proporciona una medida de dispersión más intuitiva en la misma escala de los datos originales.
+                        <div id="math-output">
+                            \( \sigma = \sqrt{\sigma^2} \)
+                        </div>
+                        <br>
+                        Desviación media: Es la media de las desviaciones absolutas de cada valor respecto a la media.
+                        <div id="math-output">
+                            \( \text{Desviación media} = \frac{1}{n} \sum_{i=1}^{n} |x_i - \bar{x}| \)
+                        </div>
+                        Desviación mediana: Es la mediana de las desviaciones absolutas de cada valor respecto a la mediana.
+                        <br>
+                        Rango: Es la diferencia entre el valor máximo y el valor mínimo en un conjunto de datos. Proporciona una medida simple de la amplitud de los datos.
+                        <div id="math-output">
+                            \( \text{Rango} = x_{\max} - x_{\min} \)
+                        </div>
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-140">
+                    <h3>Parámetros para datos agrupados</h3>
+                    <p>
+                        En estadística, cuando los datos están agrupados en intervalos o clases, se utilizan diferentes parámetros para
+                        caracterizar la distribución de los datos de manera resumida: <br>
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Media para datos agrupados:</b> Es el promedio ponderado de los puntos medios de cada clase, utilizando las frecuencias 
+                            como pesos. <br>
+                            <div id="math-output">
+                                \( \bar{x} = \frac{\sum_{i=1}^{k} f_i \cdot x_i}{n} \)
+                            </div>
+                            Donde <i>k</i> es el número de clases, <i>F<sub>i</sub></i> es la frecuencia de la i-ésima clase, <i>x<sub>i</sub></i> 
+                            es el punto medio de la i-ésima clase, y <i>n</i> es el número total de observaciones.
+                        </li>
+                        <li>
+                            <b>Varianza y desviación estándar para datos agrupados:</b> Son medidas de dispersión ajustadas para datos agrupados, 
+                            calculadas utilizando las frecuencias y los puntos medios de las clases.
+                            <div id="math-output">
+                                \( \sigma^2 = \frac{\sum_{i=1}^{k} f_i \cdot (x_i - \bar{x})^2}{n} \)
+                                <br>
+                                \( \sigma = \sqrt{\sigma^2} \)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-subtopic" id="content-150">
+                    <h3>Distribución de frecuencias</h3>
+                    <p>
+                        La distribución de frecuencias es una tabla que muestra la frecuencia (número de veces) con la que ocurren diferentes
+                        valores o rangos de valores en un conjunto de datos. Incluye:
+                    </p>
+                    <ul>
+                        <li><b>Frecuencia absoluta <i>(f)</i></b>: Número de veces que un valor específico o un intervalo de valores ocurre en el conjunto de datos.</li>
+                        <li><b>Frecuencia relativa <i>(fr)</i></b>: Proporción de la frecuencia absoluta respecto al total de observaciones.</li>
+                        <li><b>Frecuencia acumulada <i>(F)</i></b>: Suma acumulativa de las frecuencias absolutas hasta una clase específica.</li>
+                    </ul>
+                </div>
+                <div class="content-subtopic" id="content-160">
+                    <h3>Técnicas de agrupación de datos</h3>
+                    <p>
+                        Agrupar datos implica organizar los datos en clases o intervalos para facilitar su análisis y presentación. Las técnicas comunes incluyen:                
+                    </p>
+                    <ul>
+                        <li><b>Determinación del rango y número de clases:</b> Se calcula el rango de los datos y se decide el número de clases.</li>
+                        <li><b>Amplitud de clase:</b> La amplitud de cada clase se determina dividiendo el rango por el número de clases.</li>
+                        <li><b>Límites de clase</b>: Se establecen los límites inferior y superior de cada clase.</li>
+                        <li><b>Punto medio de clase:</b> Se calcula como el promedio de los límites inferior y superior de la clase.</li>
+                    </ul>
+                </div>
+                <div class="content-subtopic" id="content-170">
+                    <h3>Técnicas de muestreo</h3>
+                    <p>Las técnicas de muestreo son métodos utilizados para seleccionar una muestra representativa de una población más amplia. Incluyen: </p>
+                    <ul>
+                        <li><b>Muestreo aleatorio simple:</b> Cada miembro de la población tiene la misma probabilidad de ser seleccionado.</li>
+                        <li><b>Muestreo estratificado:</b> La población se divide en subgrupos (estratos) y se toma una muestra aleatoria de cada uno.</li>
+                        <li><b>Muestreo sistemático:</b> Se selecciona cada <i>k</i>-ésimo miembro de la población.</li>
+                        <li><b>Muestreo por conglomerados:</b> La población se divide en grupos (conglomerados) y se seleccionan aleatoriamente algunos de estos grupos.</li>
+                    </ul>
+                    <p>Estas técnicas aseguran que la muestra sea representativa de la población, permitiendo inferencias válidas y precisas sobre la población completa.</p>
+                </div>
+                <div class="content-subtopic" id="content-180">
+                    <h3>Histogramas</h3>
+                    <p>
+                        Un histograma es una representación gráfica que muestra la distribución de frecuencias de datos continuos. Se utiliza
+                        para visualizar la forma y la distribución de un conjunto de datos, destacando qué intervalos o clases tienen mayor
+                        concentración de datos. <br>
+                        Para crear un histograma, se siguen estos pasos:
+                    </p>
+                    <ul>
+                        <li><b>Dibujo de los ejes coordenados:</b> Se dibujan los ejes x e y. El eje x representa las clases o intervalos de datos, y el eje y representa la frecuencia de cada clase.</li>
+                        <li><b>Marcas en el eje x:</b> Se colocan las marcas correspondientes a cada clase o intervalo de datos en el eje x. Cada columna del histograma representa un intervalo de clase, por lo que la base de cada columna debe coincidir con el ancho del intervalo de clase.</li>
+                        <li><b>Altura de las columnas:</b> En el eje y se representa la frecuencia absoluta o relativa de cada clase. La altura de cada columna del histograma corresponde a esta frecuencia.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ###########################################  TEMA 2 ########################################### -->
+    <div class="topic">
+        <div class="topic-title" id="200"><h2>Tema 2: Fundamentos de la Teoría de Probabilidad</h2></div>
+        <div class="general-content">
+            <div class="subtopics">
+                <button class="indicator" disabled></button>
+                <button class="subtopic" id="210"><span>
+                    2.1 <span class="subtopic-title">Técnicas de Conteo</span>
+                </span></button>
+                <button class="subtopic" id="211"><span>
+                    2.1.1 <span class="subtopic-title">Principio aditivo</span>
+                </span></button>
+                <button class="subtopic" id="212"><span>
+                    2.1.2 <span class="subtopic-title">Principio Multiplicativo</span>
+                </span></button>
+                <button class="subtopic" id="213"><span>
+                    2.1.3 <span class="subtopic-title">Notación Factorial</span>
+                </span></button>
+                <button class="subtopic" id="214"><span>
+                    2.1.4 <span class="subtopic-title">Permutaciones</span>
+                </span></button>
+                <button class="subtopic" id="215"><span>
+                    2.1.5 <span class="subtopic-title">Combinaciones</span>
+                </span></button>
+                <button class="subtopic" id="216"><span>
+                    2.1.6 <span class="subtopic-title">Diagrama de Árbol</span>
+                </span></button>
+                <button class="subtopic" id="217"><span>
+                    2.1.7 <span class="subtopic-title">Teorema del Binomio</span>
+                </span></button>
+                <button class="subtopic" id="220"><span>
+                    2.2 <span class="subtopic-title">Teoría elemental de probabilidad</span>
+                </span></button>
+                <button class="subtopic" id="230"><span>
+                    2.3 <span class="subtopic-title">Probabilidad de Eventos</span>
+                </span></button>
+                <button class="subtopic" id="240"><span>
+                    2.4 <span class="subtopic-title">Probabilidad con Técnicas de Conteo</span>
+                </span></button>
+                <button class="subtopic" id="250"><span>
+                    2.5 <span class="subtopic-title">Probabilidad Condicional</span>
+                </span></button>
+                <button class="subtopic" id="260"><span>
+                    2.6 <span class="subtopic-title">Ley Multiplicativa</span>
+                </span></button>
+                <button class="subtopic" id="270"><span>
+                    2.7 <span class="subtopic-title">Eventos Independientes: Regla de Bayes</span>
+                </span></button>
+                <a href="Ejercicios_Tecnicas_De_Conteo.html" style="padding: 0px;" id="n02">
+                    <button class="subtopic" id="n"><span>
+                        [Notebook] <span class="subtopic-title">Combinaciones y Permutaciones</span>
+                    </span></button>
+                </a>
+            </div>
+            <div class="contents">
+                <div class="content-subtopic" id="content-210">
+                    <h3>Técnicas de Conteo</h3>
+                    <p>
+                        Las técnicas de conteo son métodos utilizados para determinar el número de posibles resultados o eventos en un conjunto
+                        dado. Estas técnicas son fundamentales en la teoría de probabilidad para calcular probabilidades y analizar eventos
+                        complejos. Incluyen la notación factorial, los principios multiplicativo y aditivo, permutaciones, combinaciones y el
+                        uso de diagramas de árbol.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-211">
+                    <h3>Principio aditivo</h3>
+                    <p>
+                        El principio aditivo establece que si dos operaciones son mutuamente excluyentes (no pueden ocurrir simultáneamente),
+                        entonces el número total de formas en que se pueden realizar ambas operaciones es la suma de las formas individuales.
+                        <br>
+                        Si una operación puede realizarse en m formas y otra en n y ambas no pueden realizarse juntas, entonces el número total 
+                        de formas en las que se pueden realizar es <i>m + n</i>.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-212">
+                    <h3>Principio Multiplicativo</h3>
+                    <p>
+                        El principio multiplicativo indica que si una operación puede realizarse de <i>m</i> formas y otra operación de <i>n</i>
+                        formas, entonces ambas operaciones pueden realizarse juntas de <i>m ⋅ n</i> formas.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-213">
+                    <h3>Notación Factorial</h3>
+                    <p>
+                        La notación factorial se utiliza para representar el producto de todos los enteros positivos hasta un número dado <i>n</i>.
+                        <br>
+                        <i>n</i>! = <i>n</i> ⋅ (<i>n</i> - 1) ⋅ (<i>n</i> - 2) ⋅ ... ⋅ 3 ⋅ 2 ⋅ 1
+                        <br>
+                        Por convención, 0! = 1.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-214">
+                    <h3>Permutaciones</h3>
+                    <p>
+                        Una permutación es un arreglo de todos los elementos de un conjunto donde el orden importa.
+                        <br>
+                        Sean  <i>n</i>  y  <i>r</i>  números naturales no negativos, con <i>r ≤ n</i>:
+                        <ol type="a">
+                            <li>El número de permutaciones de  n  objetos distintos es  n! .</li>
+                            <li>
+                                El número de permutaciones de  n  objetos distintos, tomando  r  a la vez, es denotado como:
+                                <div id="math-output">
+                                    \( _nP_r = \frac{n!}{(n - r)!} \)
+                                </div>
+                                Esto representa el número de maneras de ordenar <i>n</i> elementos seleccionados de un total de <i>r</i> elementos distintos.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-215">
+                    <h3>Combinaciones</h3>
+                    <p>
+                        Una combinación es un subconjunto no ordenado de tamaño  <i>r</i>  de un conjunto de  <i>n</i>  objetos distintos.
+                        <br>
+                        Sean  <i>n</i>  y  <i>r</i>  números naturales no negativos, con <i>r ≤ n</i>:
+                        <ol type="a">
+                            <li>
+                                El número de combinaciones de <i>n</i> objetos distintos tomados <i>r</i> a la vez se denota como:
+                                <div id="math-output">
+                                    \( _nC_r = \binom{n}{r} = \frac{n!}{r!(n - r)!} \)
+                                </div>
+                                Esto representa el número de maneras de ordenar <i>n</i> elementos seleccionados de un total de <i>r</i> elementos distintos.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-216">
+                    <h3>Diagrama de Árbol</h3>
+                    <p>
+                        Un diagrama de árbol se utiliza para visualizar todos los posibles resultados de un experimento o evento, mostrando las
+                        ramas correspondientes a cada opción disponible. Estos permiten representar de manera clara y estructurada eventos simples y
+                        compuestos, facilitando el cálculo de probabilidades usando el enfoque clásico de casos favorables sobre casos totales.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-217">
+                    <h3>Teorema del Binomio</h3>
+                    El teorema del binomio establece la expansión de un binomio elevado a una potencia <i>n</i>.
+                    <div id="math-output">
+                        \( (a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k \)
+                    </div>
+                    Donde 
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                        <mrow>
+                            <mo>(</mo>
+                            <mfrac linethickness="0">
+                                <mi>n</mi><mi>k</mi>
+                            </mfrac>
+                            <mo>)</mo>
+                        </mrow>
+                    </math>
+                    es el coeficiente binomial que representa el número de formas de elegir <i>k</i> elementos de un conjunto de <i>n</i> elementos.
+                </div>
+                <div class="content-subtopic" id="content-220">
+                    <h3>Teoría elemental de probabilidad</h3>
+                    <p>
+                        La teoría elemental de probabilidad proporciona herramientas para cuantificar la incertidumbre en eventos aleatorios y sus resultados.<br>
+                        Se utiliza para calcular probabilidades simples basadas en el número de resultados favorables sobre el número total de
+                        resultados posibles, especialmente en situaciones donde todos los resultados son igualmente probables. <br>
+                        La probabilidad <i>P(A)</i> de un evento <i>A</i> se calcula como el cociente entre los casos
+                        favorables para <i>A</i> y los casos totales posibles.
+                    </p>
+                    <div id="math-output">
+                        \( P(A) = \frac{\text{Casos favorables para } A}{\text{Casos totales posibles}} \)
+                    </div>
+                </div>
+                <div class="content-subtopic" id="content-230">
+                    <h3>Probabilidad de Eventos</h3>
+                    <ul>
+                        <li><b>Espacio muestral:</b> Conjunto de todos los posibles resultados de un experimento aleatorio.</li>
+                        <li><b>Evento:</b> Subconjunto del espacio muestral que representa un resultado específico o conjunto de resultados.</li>
+                        <li><b>Simbología:</b> Utilización de notaciones como <i>P(A)</i> para probabilidad de <i>A</i>∪<i>B</i> para unión de eventos <i>A</i>∩<i>B</i> para intersección de eventos <i>A</i> y <i>B</i>.</li>
+                        <li><b>Operaciones con eventos:</b> Uniones e intersecciones de eventos, representadas visualmente con diagramas de Venn para clarificar relaciones entre eventos.</li>
+                        <li><b>Diagramas de Venn:</b> Se utilizan para visualizar las relaciones entre eventos y sus intersecciones dentro del espacio muestral.</li>
+                    </ul>
+                </div>
+                <div class="content-subtopic" id="content-240">
+                    <h3>Probabilidad con Técnicas de Conteo</h3>
+                    En la teoría de la probabilidad, las técnicas de conteo son utilizadas para determinar el número de casos favorables y
+                    totales dentro de un espacio muestral, lo cual es crucial para calcular probabilidades. A continuación, se detallan
+                    aspectos clave de estas técnicas: <br>
+                    <b>Axiomas:</b>
+                    <ul>
+                        <li>
+                            <b>No negatividad:</b> La probabilidad de cualquier evento <i>E</i> es un número no negativo.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E) \geq 0 \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Normalización:</b> La probabilidad del espacio muestral completo <i>S</i> es igual a 1.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(S) = 1 \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Aditividad:</b> La probabilidad de la unión de dos eventos mutuamente excluyentes es la suma de las probabilidades de los eventos individuales.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E \cup F) = P(E) + P(F) \quad \text{si } E \cap F = \emptyset \)
+                            </div>
+                        </li>
+                    </ul>
+                    <b>Teoremas:</b>
+                    <ul>
+                        <li>
+                            <b>Teorema de la probabilidad condicional:</b>
+                            Este teorema calcula la probabilidad de que ocurra el evento <i>E</i> dado que ya ha ocurrido el evento <i>F</i>.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E \mid F) = \frac{P(E \cap F)}{P(F)} \quad \text{si } P(F) > 0 \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Teorema del evento complementario:</b>
+                            <i>E<sup>c</sup></i> es el complemento de <i>E</i>, es decir, el evento que no es <i>E</i>.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E^c) = 1 - P(E) \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Regla de multiplicación para eventos independientes:</b>
+                            Si <i>E</i> y <i>F</i> son eventos independientes, la probabilidad conjunta de ambos eventos es el producto de sus probabilidades individuales.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E \cap F) = P(E) \cdot P(F) \)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-subtopic" id="content-250">
+                    <h3>Probabilidad Condicional</h3>
+                    <ul>
+                        <li><b>Dependiente:</b> La probabilidad de que ocurra un evento depende de que otro evento ya haya ocurrido.</li>
+                        <li><b>Independiente:</b> La probabilidad de que ocurra un evento no se ve afectada por la ocurrencia o no ocurrencia de otro evento.</li>
+                    </ul>
+                </div>
+                <div class="content-subtopic" id="content-260">
+                    <h3>Ley Multiplicativa</h3>
+                    <p>
+                        La ley multiplicativa de la probabilidad se refiere a la probabilidad conjunta de dos eventos.
+                    </p>
+                    <div id="math-output" style="font-size: 1rem;">
+                        \( P(E \cap F) = P(E) \cdot P(F \mid E) \)
+                    </div>
+                    <p>
+                        Donde <i>P(E ∩F)</i> es la probabilidad de que ocurran ambos eventos <i>P(E)</i> es la probabilidad del evento 
+                        <i>E</i>, y <i>P(F |E)</i> es la probabilidad condicional de <i>F</i> dado que <i>E</i> ha ocurrido.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-270">
+                    <h3>Eventos Independientes: Regla de Bayes</h3>
+                    Cuando dos eventos son independientes, conocer la ocurrencia de uno no proporciona información útil sobre la ocurrencia
+                    del otro. Por ejemplo, lanzar una moneda dos veces: el resultado del primer lanzamiento no afecta las probabilidades del
+                    segundo lanzamiento.
+                    <br>
+                    Si <i>E</i> y <i>F</i> son independientes, entonces <i>E<sup>c</sup></i>(el complemento de <i>E</i> ) y <i>F</i> también son 
+                    independientes, y viceversa.
+                    <br>
+                    Más de dos eventos pueden ser independientes simultáneamente si cada par de eventos es independiente entre sí.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ###########################################  TEMA 3 ########################################### -->
+    <div class="topic">
+        <div class="topic-title" id="300"><h2>Tema 3: Variables Aleatorias</h2></div>
+        <div class="general-content">
+            <div class="subtopics">
+                <button class="indicator" disabled></button>
+                <button class="subtopic" id="310"><span>
+                    3.1 <span class="subtopic-title">Variables aleatorias discretas</span>
+                </span></button>
+                <button class="subtopic" id="311"><span>
+                    3.1.1 <span class="subtopic-title">Distribución de Probabilidad en Forma General</span>
+                </span></button>
+                <button class="subtopic" id="312"><span>
+                    3.1.2 <span class="subtopic-title">Valor Esperado</span>
+                </span></button>
+                <button class="subtopic" id="313"><span>
+                    3.1.3 <span class="subtopic-title">Varianza y Desviación Estándar</span>
+                </span></button>
+                <button class="subtopic" id="314"><span>
+                    3.1.4 <span class="subtopic-title">Función de Distribución Acumulada (FDA)</span>
+                </span></button>
+                <button class="subtopic" id="320"><span>
+                    3.2 <span class="subtopic-title">Variables Aleatorias Continuas</span>
+                </span></button>
+                <button class="subtopic" id="321"><span>
+                    3.2.1 <span class="subtopic-title">Distribución de Probabilidad en Forma General</span>
+                </span></button>
+                <button class="subtopic" id="322"><span>
+                    3.2.2 <span class="subtopic-title">Valor Esperado</span>
+                </span></button>
+                <button class="subtopic" id="323"><span>
+                    3.2.3 <span class="subtopic-title">Varianza y Desviación Estándar</span>
+                </span></button>
+                <button class="subtopic" id="324"><span>
+                    3.2.4 <span class="subtopic-title">Función de Distribución Acumulada (FDA)</span>
+                </span></button>
+                <button class="subtopic" id="325"><span>
+                    3.2.5 <span class="subtopic-title">Cálculos de Probabilidad</span>
+                </span></button>
+            </div>
+            <div class="contents">
+                <div class="content-subtopic" id="content-310">
+                    <h3>Variables aleatorias discretas</h3>
+                    <p>
+                        Las variables aleatorias discretas son aquellas cuyos valores posibles forman un
+                        conjunto finito o infinito numerable. Esto significa que la variable solo puede tomar
+                        valores específicos, como números enteros, y cada uno de estos valores tiene una
+                        probabilidad asociada. Por ejemplo, el resultado de lanzar un dado es una variable
+                        aleatoria discreta, ya que solo puede tomar valores como 1, 2, 3, 4, 5 o 6, cada uno
+                        con una probabilidad específica.
+                        <center>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-v3st4h0HdE?si=2__aAmOnmX8uZdsl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </center>
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-311">
+                    <h3>Distribución de Probabilidad en Forma General</h3>
+                    <p>
+                        La distribución de probabilidad describe cómo se distribuyen las probabilidades
+                        entre los posibles valores que puede tomar una variable aleatoria.
+                        <br>
+                        Las propiedades que debe cumplir una distribución de probabilidad son:
+                        <br>
+                        <div id="math-output">
+                            \( 0 ≤ P(Xi) ≤ 1 \)
+                            <br>
+                            \( \sum_{i=1}^{N} P(X_i) = 1 \)
+                        </div>
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-312">
+                    <h3>Valor Esperado</h3>
+                    <p>
+                        El valor esperado de una variable aleatoria es el promedio ponderado de todos los
+                        posibles valores que puede tomar, ponderados por sus probabilidades respectivas.
+                    </p>
+                    <div id="math-output">
+                        \( \mu = E[X] = \sum_{i=1}^{n} X_i P(X_i) \)
+                    </div>
+                    <p>
+                        Donde <i>X<sub>i</sub></i> son los posibles valores que puede tomar la variable aleatoria
+                        <i>X</i>, y <i>P(X<sub>i</sub>)</i> son las probabilidades asociadas a estos valores.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-313">
+                    <h3>Varianza y Desviación Estándar</h3>
+                    <p>
+                        La varianza mide la dispersión de los valores de una variable aleatoria respecto a su media,
+                        y se calcula de la siguiente manera:
+                    </p>
+                    <div id="math-output">
+                        $$
+                        \begin{align}
+                        \sigma^2 &= Var(X) = \sum_{i=1}^{n} P(X_i) (X_i - \mu)^2 \\\\
+                        \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
+                        \end{align}
+                        $$
+                    </div>
+                    <br>
+                    <p>
+                        Mientras que la desviación estándar es la raíz cuadrada positiva de la varianza.
+                    </p>
+                    <div id="math-output">
+                        \( \sigma = \sqrt{\sigma^2} = \sqrt{Var(X)} \)
+                    </div>
+                </div>
+                <div class="content-subtopic" id="content-314">
+                    <h3>Función de Distribución Acumulada (FDA)</h3>
+                    <p>
+                        La función acumulada (o función de distribución acumulada) de una variable aleatoria
+                        <i>X</i>, denotada como <i>F(x)</i>, indica la probabilidad de que <i>X</i> sea menor
+                        o igual a un valor dado <i>x</i>.
+                    </p>
+                    <div id="math-output">
+                        \( F(x) = P(X \leq x) \)
+                        <br><br>
+                        \( P(X \geq x) + P(X < x)=1 \) <br><br>
+                            \( P(X > x) + P(X \leq x) = 1 \)
+                    </div>
+                </div>
+                <div class="content-subtopic" id="content-320">
+                    <h3>Variables Aleatorias Continuas</h3>
+                    <p>
+                        En contraste con las variables aleatorias discretas, las variables aleatorias continuas
+                        pueden tomar cualquier valor dentro de un intervalo real. Esto significa que los
+                        resultados pueden ser números reales y no necesariamente valores específicos. <br>
+                        Por ejemplo, la altura de una persona o la temperatura medida en grados Celsius son ejemplos
+                        de variables aleatorias continuas, ya que pueden tomar cualquier valor dentro de un rango
+                        específico (por ejemplo, de 0 a 100 cm para la altura, o de -273.15°C a 100°C para la temperatura).
+                        <center>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FvBnzPEeoXc?si=nBv7KMG8_MVRndHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </center>
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-321">
+                    <h3>Distribución de Probabilidad en Forma General</h3>
+                    <p>
+                        La distribución de probabilidad para variables aleatorias continuas se describe mediante una
+                        función de densidad de probabilidad <i>f(x)</i>.
+                        <br>
+                        Las propiedades que debe cumplir una función de densidad son:
+                    </p>
+                    <div id="math-output">
+                        \( f(x) \geq 0 \quad \text{para todo } x \in \mathbb{R} \)
+                        <br><br>
+                        \( \int\limits_{-\infty}^{\infty} f(x) \, dx = 1 \)
+                        <br><br>
+                        \( P(a \lt X \lt b) = \int\limits_{a}^{b} f(x) \, dx \) 
+                    </div>
+                </div>
+                <div class="content-subtopic" id="content-322">
+                    <h3>Valor Esperado</h3>
+                    <p>
+                        El valor esperado de una variable aleatoria continua es el promedio ponderado de todos
+                        los posibles valores que puede tomar, ponderados por su función de densidad de probabilidad.
+                    </p>
+                    <div id="math-output">
+                        \( \mu = E[X] = \int\limits_{-\infty}^{\infty} x f(x) \, dx \)
+                    </div>
+                </div>
+                <div class="content-subtopic" id="content-323">
+                    <h3>Varianza y Desviación Estándar</h3>
+                    <p>
+                        La varianza y la desviación estándar de una variable aleatoria continua se calculan de
+                        manera similar a las variables discretas, pero integrando respecto a la función de
+                        densidad de probabilidad.
+                    </p>
+                    <div id="math-output">
+                        $$
+                        \begin{align}
+                        \sigma^2 &= Var(X) = \int\limits_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx \\\\
+                        \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
+                        \end{align}
+                        $$
+                    </div>
+                    <br>
+                    <p>
+                        La desviación estándar solo es la raíz cuadrada de la varianza.
+                    </p>
+                    <div id="math-output">
+                        \( \sigma = \sqrt{\sigma^2} = \sqrt{Var(X)} \)
+                    </div>
+                </div>
+                <div class="content-subtopic" id="content-324">
+                    <h3>Función de Distribución Acumulada (FDA)</h3>
+                    <p>
+                        La función acumulada <i>F(x)</i> de una variable aleatoria continua indica la probabilidad de
+                        que
+                        la variable aleatoria <i>X</i> sea menor o igual a un valor dado <i>x</i>.
+                    </p>
+                    <div id="math-output">
+                        \( F(x) = P(X \leq x) \)
+                    </div>
+                    <br>
+                    <p>
+                        Y la probabilidad de que <i>X</i> esté en un intervalo [<i>a,b</i>] se calcula como 
+                        <i>P</i>(<i>a < X ≤ b</i>)<i> = F</i>(<i>b</i>) - F</i>(<i>b</i>).
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-325">
+                    <h3>Cálculos de Probabilidad</h3>
+                    <p>
+                        Los cálculos de probabilidad para variables aleatorias continuas se realizan principalmente mediante
+                        integrales de la función de densidad de probabilidad (PDF) en intervalos específicos, como se
+                        indicó anteriormente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ###########################################  TEMA 4 ########################################### -->
+    <div class="topic">
+        <div class="topic-title" id="400"><h2>Tema 4: Distribuciones de Probabilidad</h2></div>
+        <div class="general-content">
+            <div class="subtopics">
+                <button class="indicator" disabled></button>
+                <button class="subtopic" id="410"><span>
+                    4.1 <span class="subtopic-title">Función de probabilidad</span>
+                </span></button>
+                <button class="subtopic" id="420"><span>
+                    4.2 <span class="subtopic-title">Distribución binomial</span>
+                </span></button>
+                <button class="subtopic" id="430"><span>
+                    4.3 <span class="subtopic-title">Distribución hipergeométrica</span>
+                </span></button>
+                <button class="subtopic" id="440"><span>
+                    4.4 <span class="subtopic-title">Distribución de Poisson</span>
+                </span></button>
+                <button class="subtopic" id="450"><span>
+                    4.5 <span class="subtopic-title">Distribución normal</span>
+                </span></button>
+                <button class="subtopic" id="460"><span>
+                    4.6 <span class="subtopic-title">Distribución T-student</span>
+                </span></button>
+                <button class="subtopic" id="470"><span>
+                    4.7 <span class="subtopic-title">Distribución Chi cuadrada</span>
+                </span></button>
+                <button class="subtopic" id="480"><span>
+                    4.8 <span class="subtopic-title">Distribución F</span>
+                </span></button>
+            </div>
+            <div class="contents">
+                <div class="content-subtopic" id="content-410">
+                    <h3>Función de probabilidad</h3>
+                    <p>
+                        Se define como una función que asigna probabilidades a cada valor posible de la variable.
+                        La función de probabilidad asigna la probabilidad de que una variable aleatoria discreta
+                        <i>X</i> tome un valor específico <i>x</i>.
+                    </p>
+                    <div id="math-output">
+                        \( P(X = x) \)
+                    </div>
+                </div>
+                <div class="content-subtopic" id="content-420">
+                    <h3>Distribución binomial</h3>
+                    <p>
+                        La distribución binomial se utiliza para modelar la probabilidad de obtener un número
+                        específico de éxitos en un número fijo de ensayos de Bernoulli con dos resultados posibles,
+                        cada uno con la misma probabilidad de éxito (<i>p</i>).
+                        <br>
+                        Fórmula de la función de probabilidad:
+                    </p>
+                    <div id="math-output">
+                        \( P(k; n, p) = \binom{n}{k} p^k (1 - p)^{n - k} \)
+                    </div>
+                    <p>
+                        Donde <i>n</i> es el número de ensayos de Bernoulli, <i>k</i> es el número de éxitos, y <i>p</i>
+                        es la probabilidad de éxito en un ensayo.
+                        <br>
+                        Cálculo de la media:
+                    <div id="math-output">
+                        \( np \)
+                    </div>
+                    Cálculo de la varianza:
+                    <div id="math-output">
+                        \( np(1 - p) \)
+                    </div>
+                    </p>
+<pre>
+<b> Código en Python</b>
+<code class="python">from scipy.stats import binom
+
+n = 10
+p = 0.5
+k=4
+prob = binom.pmf(k, n, p)
+</code></pre>
+                </div>
+                <div class="content-subtopic" id="content-430">
+                    <h3>Distribución hipergeométrica</h3>
+                    <p>
+                        La distribución hipergeométrica modela la probabilidad de obtener un número específico
+                        de elementos de interés (éxitos) en una muestra extraída sin reemplazo de una población
+                        finita dividida en dos grupos.
+                        <br>
+                        Fórmula de la función de probabilidad:
+                    </p>
+                    <div id="math-output">
+                        \( P(k; N, n, K) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}} \)
+                    </div>
+                    <p>
+                        Donde <i>N</i> es el tamaño total de la población, <i>K</i> es el número de elementos de interés
+                        en la población,
+                        <i>n</i> es el tamaño de la muestra y <i>k</i> es el número de éxitos en la muestra.
+                        <br>
+                        Cálculo de la media:
+                        <div id="math-output">
+                            \( \frac{nK}{N} \)
+                        </div>
+                        Cálculo de la varianza:
+                        <div id="math-output">
+                            \( \frac{nK (N-K)(N-n)}{N^2(N-1)} \)
+                        </div>
+                    </p>
+<pre>
+<b> Código en Python</b>
+<code class="python">from scipy.stats import hypergeom
+N = 100
+n = 20
+K = 10
+k=4
+prob = hypergeom.pmf(k, N, n, K)
+</code></pre>
+                </div>
+                <div class="content-subtopic" id="content-440">
+                    <h3>Distribución de Poisson</h3>
+                    <p>
+                        La distribución de Poisson se utiliza para modelar el número de eventos de baja frecuencia
+                        (eventos raros)
+                        que ocurren en un intervalo de tiempo o espacio.
+                        <br>
+                        Fórmula de la función de probabilidad:
+                    </p>
+                    <div id="math-output">
+                        \( P(k; \lambda) = \frac{e^{-\lambda} \lambda^k}{k!} \)
+                    </div>
+                    <p>
+                        Donde λ es el número promedio de eventos por intervalo de tiempo o espacio, y <i>k</i> es el
+                        número de
+                        eventos que queremos modelar.
+                        <br>
+                        Cálculo de la media:
+                        <div id="math-output">
+                            \( \lambda \)
+                        </div>
+                        Cálculo de la varianza:
+                        <div id="math-output">
+                            \( \lambda \)
+                        </div>
+                    </p>
+<pre>
+<b> Código en Python</b>
+<code class="python">from scipy.stats import poisson
+lmbda = 3
+k=2
+prob = poisson.pmf(k, lmbda)
+</code></pre>
+                </div>
+                <div class="content-subtopic" id="content-450">
+                    <h3>Distribución normal</h3>
+                    <p>
+                        La distribución normal es utilizada para modelar una amplia variedad de fenómenos naturales y
+                        sociales
+                        debido a su forma de campana y propiedades estadísticas bien conocidas.
+                        <br>
+                        Función de densidad de probabilidad:
+                    </p>
+                    <div id="math-output">
+                        \( f(x; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2 \sigma^2}} \)
+                    </div>
+                    <p>
+                        Donde 𝜇 es la media y σ<sup>2</sup> es la varianza de la distribución.
+                        <br>
+                        Cálculo de la media:
+                        <div id="math-output">
+                            \( \mu \)
+                        </div>
+                        Cálculo de la varianza:
+                        <div id="math-output">
+                            \( \sigma^2 \)
+                        </div>
+                    </p>
+<pre>
+<b> Código en Python</b>
+<code class="python">from scipy.stats import norm
+mu = 0
+sigma = 1
+x = 1.5
+prob = norm.pdf(x, mu, sigma)
+</code></pre>
+                </div>
+                <div class="content-subtopic" id="content-460">
+                    <h3>Distribución T-student</h3>
+                    <p>
+                        La distribución T-student se utiliza para inferencia estadística cuando el tamaño de la
+                        muestra es pequeño y la varianza de la población es desconocida.
+                        <br>
+                        Fórmula de la función de densidad de probabilidad:
+                    </p>
+                    <div id="math-output">
+                        \( f(t | \nu) = \frac{\Gamma\left(\frac{\nu + 1}{2}\right)}{\sqrt{\nu \pi} \Gamma\left(\frac{\nu}{2}\right) \left(1 + \frac{t^2}{\nu}\right)^{\frac{\nu + 1}{2}}} \)
+                    </div>
+                    <p>
+                        Donde <i>t</i> es la variable aleatoria T de Student, <i>v</i> son los grados de libertad de la
+                        distribución
+                        y <i>Γ</i>(⋅) denota la función gamma, que para un entero <i>n</i> es (<i>n</i>-1)!.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-470">
+                    <h3>Distribución Chi cuadrada</h3>
+                    <p>
+                        La distribución Chi cuadrada se utiliza para pruebas de hipótesis y para construir intervalos de
+                        confianza
+                        sobre la varianza de una población normalmente distribuida.
+                        <br>
+                        Función de densidad de probabilidad:
+                    </p>
+                    <div id="math-output">
+                        \( f(x | \nu) = \frac{x^{\frac{\nu}{2} - 1} e^{-\frac{x}{2}}}{2^{\frac{\nu}{2}}
+                        \Gamma\left(\frac{\nu}{2}\right)} \)
+                    </div>
+                    <p>
+                        Donde <i>x</i> es la variable aleatoria Chi-cuadrado, <i>v</i> es el número de grados de
+                        libertad y <i>Γ</i>(⋅) denota la función gamma.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-480">
+                    <h3>Distribución F</h3>
+                    <p>
+                        La distribución F se utiliza principalmente en análisis de varianza (ANOVA) y en
+                        comparaciones de varianzas entre dos o más muestras.
+                        <br>
+                        Función de densidad de probabilidad:
+                    </p>
+                    <div id="math-output">
+                        \( f(x | d_1, d_2) = \frac{\Gamma\left(\frac{d_1 + d_2}{2}\right) \left(\frac{d_1}{d_2}\right)^{\frac{d_1}{2}} x^{\frac{d_1}{2} - 1}}{\Gamma\left(\frac{d_1}{2}\right) \Gamma\left(\frac{d_2}{2}\right) \left(1 + \frac{d_1 x}{d_2}\right)^{\frac{d_1 + d_2}{2}}} \)
+                    </div>
+                    <p>
+                        Donde donde <i>d</i><sub>1</sub> y <i>d</i><sub>2</sub> son los grados de libertad de las dos muestras que se están
+                        comparando.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ###########################################  TEMA 5 ########################################### -->
+    <div class="topic">
+        <div class="topic-title" id="500"><h2>Tema 5: Regresión lineal</h2></div>
+        <div class="general-content">
+            <div class="subtopics">
+                <button class="indicator" disabled></button>
+                <button class="subtopic" id="510"><span>
+                    5.1 <span class="subtopic-title">Regresión y correlación</span>
+                </span></button>
+                <button class="subtopic" id="511"><span>
+                    5.1.1 <span class="subtopic-title">Diagrama de dispersión</span>
+                </span></button>
+                <button class="subtopic" id="512"><span>
+                    5.1.2 <span class="subtopic-title">Regresión lineal simple</span>
+                </span></button>
+                <button class="subtopic" id="513"><span>
+                    5.1.3 <span class="subtopic-title">Correlación</span>
+                </span></button>
+                <button class="subtopic" id="514"><span>
+                    5.1.4 <span class="subtopic-title">Coeficientes de correlación y de determinación</span>
+                </span></button>
+                <button class="subtopic" id="515"><span>
+                    5.1.5 <span class="subtopic-title">Distribución normal bidimensional</span>
+                </span></button>
+            </div>
+            <div class="contents">
+                <div class="content-subtopic" id="content-510">
+                    <h3>Regresión y correlación</h3>
+                    <p>
+                        La regresión y la correlación son técnicas estadísticas utilizadas para analizar la relación entre dos variables. La regresión se utiliza para predecir el valor de una variable en función de otra, mientras que la correlación mide la fuerza y la dirección de la relación entre dos variables.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-511">
+                    <h3>Diagrama de dispersión</h3>
+                    <p>
+                        Un diagrama de dispersión es una representación gráfica que muestra la relación entre dos variables. Cada punto en el gráfico representa un par de valores de las dos variables. Se utiliza para identificar patrones, tendencias y posibles relaciones entre las variables.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-512">
+                    <h3>Regresión lineal simple</h3>
+                    <p>
+                        La regresión lineal simple es un método para modelar la relación entre dos variables mediante una línea recta. La ecuación de la recta es:
+                    </p>
+                    <div id="math-output">
+                        \( y = \beta_0 + \beta_1 x \)
+                    </div>
+                    <p>
+                        Donde <i>y</i> es la variable dependiente, <i>x</i> es la variable independiente, β<sub>0</sub> es la ordenada al origen (intercepto), y β<sub>1</sub> es la pendiente de la recta. Se utiliza para predecir el valor de la variable dependiente en función de la variable independiente.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-513">
+                    <h3>Correlación</h3>
+                    <p>
+                        La correlación mide la fuerza y la dirección de la relación lineal entre dos variables. El coeficiente de correlación <i>r</i> varía entre -1 y 1:
+                    </p>
+                    <div id="math-output">
+                        \( r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}} \)
+                    </div>
+                    <p>
+                        Donde <i>x<sub>i</sub></i> y <i>y<sub>i</sub></i> son los valores de las variables, y <i class="overline">x</i> y <i class="overline">y</i> son sus respectivas medias.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-514">
+                    <h3>Determinación y análisis de los coeficientes de correlación y de determinación</h3>
+                    <ul>
+                        <li>
+                            <b>Coeficiente de correlación <i>r</i>: </b>Mide la relación lineal entre dos variables. Su valor absoluto indica la fuerza de la relación.
+                        </li>
+                        <li>
+                            <b>Coeficiente de determinación <i>R</i><sup>2</sup>: </b> Representa la proporción de la varianza en la variable dependiente que se puede explicar por la variable independiente en el modelo de regresión. Se calcula como:
+                            <div id="math-output">
+                                \( R^2 = \left( \frac{\sum (\hat{y}_i - \bar{y})^2}{\sum (y_i - \bar{y})^2} \right) \)
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        Donde <i class="caret-above">y<sub>i</sub></i> son los valores predichos y <i>y<sub>i</sub></i> son los valores observados. Un valor de <i>R</i><sup>2</sup> cercano a 1 indica que el modelo explica bien la variabilidad de los datos.
+                    </p>
+                </div>
+                <div class="content-subtopic" id="content-515">
+                    <h3>Distribución normal bidimensional</h3>
+                    <p>
+                        La distribución normal bidimensional describe la distribución conjunta de dos variables normalmente distribuidas. Está caracterizada por dos medias, dos varianzas y una covarianza. La función de densidad conjunta es:
+                    </p>
+                    <div id="math-output">
+                        \( f(x, y) = \frac{1}{2\pi \sigma_x \sigma_y \sqrt{1-\rho^2}} \exp \left( -\frac{1}{2(1-\rho^2)} \left[ \left( \frac{x-\mu_x}{\sigma_x} \right)^2 + \left( \frac{y-\mu_y}{\sigma_y} \right)^2 - \frac{2\rho (x-\mu_x)(y-\mu_y)}{\sigma_x \sigma_y} \right] \right) \)
+                    </div>
+                    <p>
+                        Donde <i>μ<sub>x</sub></i> y <i>μ<sub>y</sub></i> son las medias de <i>x</i> y <i>y</i>, <i>σ<sub>x</sub></i> y <i>σ<sub>y</sub></i> son las desviaciones estándar, y <i>ρ</i> es el coeficiente de correlación entre <i>x</i> y <i>y</i>. Se utiliza en la evaluación conjunta de dos variables continuas que siguen una distribución normal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <div class="topic">
+        <div class="topic-title"><h2>@@@@@@@@@@@@@@@</h2></div>
+        <div class="general-content">
+            <div class="subtopics">
+                <button class="indicator" disabled></button>
+                <button class="subtopic" id="############"><span>
+                    <span class="subtopic-title">@@@@@@@@@@@@@@@@</span>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                </span></button>
+            </div>
+            <div class="contents">
+                <div class="content-subtopic" id="content-############">
+                    <h3><span class="content-subtopic-number">@@@@@@@@@@@@@@@@</span>@@@@@@@@@@@@@@@@</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <script src="js.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
