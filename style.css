@@ -47,6 +47,14 @@ h6 { font-size: 0.7em; }
 ::-webkit-scrollbar-button {
     display: none;
 }
+::selection {
+    background-color: #FD04E0;
+    color: #ffffff; 
+}
+::-webkit-selection {
+    background-color: #FD04E0;
+    color: #ffffff; 
+}
 
 /************************************************************
             Estilo para los encabezados
